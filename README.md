@@ -18,7 +18,7 @@ Copy the `oc-franken-ui` content under the October `/themes` directory. Switch t
 installation and install the required development components:
 
 ```
-npm install npm install -D tailwindcss postcss autoprefixer franken-ui@internal laravel-mix mix-tailwindcss browser-sync@2.0 --save-dev
+npm install -D tailwindcss postcss autoprefixer franken-ui@internal laravel-mix mix-tailwindcss browser-sync@2.0 --save-dev
 ```
 
 **NOTE**: node module `browser-sync` must be version 2.x, do not install the latest 3.x. There is a compatibility issue with the module
