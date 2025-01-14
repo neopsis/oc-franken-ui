@@ -27,8 +27,9 @@ npm install npm install -D tailwindcss postcss autoprefixer franken-ui@internal 
 Now you can start the theme development. To compile your CSS and JS, use the Laravel Mix command `mix`
 in a terminal from your **theme root directory**:
 
-* `mix build` compiles the sources from the directory `assets/resources` to `assets/public`.
-* `mix watch` compiles like `mix-build` but additionally watches for file changes and keeps the
+* `mix` or `mix build` compiles the sources from the directory `assets/resources` into `assets/public`.
+* `mix watch` compiles like `mix build`, but additionally watches for file changes and keeps the
    public resources up to date. Thanks `browser-sync` package the changes are propagated to the browser.
+* `mix --production` compiles and **minifies** the sources for production.
 
 
