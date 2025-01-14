@@ -1,0 +1,35 @@
+==
+<!doctype html>
+<html lang="{{ this.app.locale|slice(0,2) }}" class="h-100">
+
+    <head>
+        {% partial 'layout/head' %}
+    </head>
+
+    {# max page width is xl (1280 px) #}
+    <body class="bg-background text-foreground max-w-screen-xl">
+
+        <!-- ======== Header Section Start ========= -->
+        <div class="uk-container uk-container-xl mt-10 min-w-fit">
+            {% partial 'layout/header' %}
+        </div>
+        <!-- ======== Header Section End =========== -->
+
+        <!-- ======== Main Section Start =========== -->
+        <div class="uk-container uk-container-xl min-w-fit" >
+            {% page %}
+        </div>
+        <!-- ======== Main Section End ============= -->
+
+        <!-- ======== Footer Section Start ========= -->
+        <footer class="uk-container uk-container-xl min-w-fit">
+            {% partial 'layout/footer' %}
+        </footer>
+        <!-- ======== Footer Section End ========= -->
+
+        {% scripts %}
+        {% framework  %}
+        {% framework extras %}
+
+    </body>
+</html>

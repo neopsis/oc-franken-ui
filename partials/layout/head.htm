@@ -1,0 +1,56 @@
+<!-- Basic -->
+<meta charset="utf-8">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+/>
+
+<title>Playground</title>
+
+<meta name="keywords" content="Playground" />
+<meta name="description" content="OctoberCMS playground website">
+<meta name="author" content="Robert Čarnecký, Neopsis GmbH">
+
+<style>
+    :root {
+        font-family: Inter, sans-serif;
+        font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
+    }
+    @supports (font-variation-settings: normal) {
+        :root {
+            font-family: InterVariable, sans-serif;
+        }
+    }
+</style>
+
+<!-- MAIN CSS CUSTOM SHEET -->
+<link type="text/css" rel="stylesheet" href="{{ 'assets/public/app.css' |theme }}" />
+
+<!-- Alpine Core -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<script>
+    const htmlElement = document.documentElement;
+
+    const __FRANKEN__ = JSON.parse(
+        localStorage.getItem("__FRANKEN__") || "{}"
+    );
+
+    if (
+        __FRANKEN__.mode === "dark" ||
+        (!__FRANKEN__.mode &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+        htmlElement.classList.add("dark");
+    } else {
+        htmlElement.classList.remove("dark");
+    }
+
+    htmlElement.classList.add(__FRANKEN__.theme || "uk-theme-zinc");
+    htmlElement.classList.add(__FRANKEN__.radii || "uk-radii-md");
+    htmlElement.classList.add(__FRANKEN__.shadows || "uk-shadows-sm");
+    htmlElement.classList.add(__FRANKEN__.font || "uk-font-sm");
+</script>
+
+
+{% styles %}

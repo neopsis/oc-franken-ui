@@ -1,0 +1,39 @@
+title = "Index"
+layout="default"
+url = "/"
+==
+
+<div class="uk-h1 text-center">
+    Template for OctoberCMS / FrankenUI / TailwindCSS playground
+</div>
+
+<div class="uk-h3 text-center mt-10">Select your primary color</div>
+
+<div class="text-center mt-10">
+    <span class="uk-badge">Base</span>
+    <span class="uk-badge uk-badge-primary">Primary</span>
+    <span class="uk-badge uk-badge-secondary">Secondary</span>
+    <span class="uk-badge uk-badge-destructive">Destructive</span>
+
+
+    <div class="flex justify-center mt-10">
+        <uk-theme-switcher>
+            <select hidden>
+                <optgroup data-key="theme" label="Theme">
+                    <option data-hex="#52525b" value="uk-theme-zinc" selected>Zinc</option>
+                    <option data-hex="#64748b" value="uk-theme-slate">Slate</option>
+                    <option data-hex="#78716c" value="uk-theme-stone">Stone</option>
+                    <option data-hex="#6b7280" value="uk-theme-gray">Gray</option>
+                    <option data-hex="#737373" value="uk-theme-neutral">Neutral</option>
+                    <option data-hex="#dc2626" value="uk-theme-red">Red</option>
+                    <option data-hex="#e11d48" value="uk-theme-rose">Rose</option>
+                    <option data-hex="#f97316" value="uk-theme-orange">Orange</option>
+                    <option data-hex="#16a34a" value="uk-theme-green">Green</option>
+                    <option data-hex="#2563eb" value="uk-theme-blue">Blue</option>
+                    <option data-hex="#facc15" value="uk-theme-yellow">Yellow</option>
+                    <option data-hex="#7c3aed" value="uk-theme-violet">Violet</option>
+                </optgroup>
+            </select>
+        </uk-theme-switcher>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+name: franken
+description: 'Theme skeleton for OctoberCMS using Franken UI'
+author: Neopsis
+homepage: www.neopsis.com
+authorCode: neopsis
+code: playground
+parent: ''
+database: '0'

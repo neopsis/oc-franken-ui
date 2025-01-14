@@ -1,0 +1,8 @@
+{
+    "name": "neopsis/playground-theme",
+    "type": "october-theme",
+    "description": "Theme skeleton for OctoberCMS using Franken UI",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

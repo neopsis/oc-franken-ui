@@ -1,0 +1,39 @@
+/**
+
+  In CSS, the order of the rules in your stylesheet decides which declaration wins when two selectors have the same specificity:
+
+     .btn {
+        background: blue;
+        ...
+     }
+     .bg-black {
+         background: black;
+     }
+
+  Here, both buttons will be black since .bg-black comes after .btn in the CSS:
+
+     <button class="btn bg-black">...</button>
+     <button class="bg-black btn">...</button>
+
+  To manage this, Tailwind organizes the styles it generates into three different “layers” — a concept popularized by ITCSS.
+
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+  Custom CSS: for customizing theme see https://tailwindcss.com/docs/adding-custom-styles#customizing-your-theme
+  The base layer is for things like reset rules or default styles applied to plain HTML elements.
+ */
+@layer base {}
+
+/**
+ * The components layer is for class-based styles that you want to be able to override with utilities.
+ */
+@layer components {}
+
+/**
+ * The utilities layer is for small, single-purpose classes that should always take precedence over any other styles.
+ */
+@layer utilities {}
